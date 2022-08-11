@@ -58,8 +58,9 @@ public class Main {
         System.out.println(harryPotterAndThePhilosophersStone.toString ());
         //проверки метода equals
         System.out.println (theGreatGatsby.equals (theGreatGatsby1997));
-        System.out.println(francisFitzgerald.equals (francisScottFitzgerald));
         System.out.println(francisFitzgerald.equals (johnTolkien));
+        System.out.println(francisFitzgerald.equals (francisScottFitzgerald));
+
 
         }
 
