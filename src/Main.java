@@ -5,6 +5,8 @@ public class Main {
             if (books[i] == null) {
                 books[i] = newBook;
                 break;
+            } else if (i >= 7) {
+                System.out.println("Нет свободного места, чтобы добавить книгу");
             }
 
         }
@@ -30,14 +32,14 @@ public class Main {
 
 
         System.out.println(theLordOfTheRings.getBookName() + " " + theLordOfTheRings.getPublishingYear() + " " +
-                theLordOfTheRings.getAuthorName());
+                johnTolkien.toString());
         System.out.println(harryPotterAndThePhilosophersStone.getBookName() + " " +
                 harryPotterAndThePhilosophersStone.getPublishingYear() + " "
-                + harryPotterAndThePhilosophersStone.getAuthorName());
+                + joanneRowling.toString());
 
         theLordOfTheRings.setPublishingYear(2018);
         System.out.println(theLordOfTheRings.getBookName() + " " + theLordOfTheRings.getPublishingYear() + " " +
-                theLordOfTheRings.getAuthorName());
+                johnTolkien.toString());
         System.out.println();
 
         //доп задание Средний уровень
@@ -46,9 +48,18 @@ public class Main {
         Author francisFitzgerald = new Author("Фрэнсис", "Фитцджеральд");
         Book theGreatGatsby = new Book("Великий Гэтсби", francisFitzgerald, 1996);
 
+       Book theGreatGatsby1997 = new Book("Великий Гэтсби", francisFitzgerald, 1997);
+        Author francisScottFitzgerald = new Author("Фрэнсис", "Фитцджеральд");
         addNewBook(theGreatGatsby, arraysOfBooks);
 
         printListOfBooks(arraysOfBooks);
+
+        //проверка метода toString
+        System.out.println(harryPotterAndThePhilosophersStone.toString ());
+        //проверки метода equals
+        System.out.println (theGreatGatsby.equals (theGreatGatsby1997));
+        System.out.println(francisFitzgerald.equals (francisScottFitzgerald));
+        System.out.println(francisFitzgerald.equals (johnTolkien));
 
         }
 
